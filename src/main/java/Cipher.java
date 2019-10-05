@@ -29,6 +29,7 @@ public class Cipher {
 
     public String encryptText(String shiftDirection, int shiftBy){
         String[] brokenString = inputString.split("");
+
         for (String letter : brokenString) {
             if(letter.contains(" ")){
                 //noinspection StringConcatenationInLoop
@@ -65,14 +66,24 @@ public class Cipher {
                         }
                     }
                 }
-
             }
         }
+
         return encryptedString;
     }
 
     public String decryptText(String shiftDirection, int shiftBy){
-        decryptedString = inputString;
+        String[] brokenString = inputString.split("");
+
+        for (String letter : brokenString) {
+            for (int y = alphabets.length-1; y >= 0; y--) {
+                if (letter.equalsIgnoreCase(alphabets[y])) {
+                    //noinspection StringConcatenationInLoop
+                    decryptedString += alphabets[y - shiftBy];
+                }
+            }
+        }
+
         return decryptedString;
     }
 }

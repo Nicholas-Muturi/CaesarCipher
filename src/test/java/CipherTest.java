@@ -68,4 +68,9 @@ public class CipherTest {
         assertTrue(cipher.decryptText("right", 1) instanceof String);
     }
 
+    @Test
+    public void runDecrypt_decrypt1Letter_String() {
+        Cipher cipher = new Cipher("z");
+        assertEquals("y", cipher.decryptText("right",1));
+    }
 }
