@@ -50,6 +50,12 @@ public class CipherTest {
     }
 
     @Test
+    public void runEncrypt_dealingWithNonAlphabets_String() {
+        Cipher cipher = new Cipher("1-2.3");
+        assertEquals("1-2.3", cipher.encryptText("right",3));
+    }
+
+    @Test
     public void runEncrypt_shiftLettersToLeftBy1_String() {
         Cipher cipher = new Cipher("b");
         assertEquals("a", cipher.encryptText("left",1));
@@ -96,6 +102,12 @@ public class CipherTest {
     public void runDecrypt_decryptToTheRight_String() {
         Cipher cipher = new Cipher("qeb nrfzh yoltk clu grjmp");
         assertEquals("the quick brown fox jumps", cipher.decryptText("right",3));
+    }
+
+    @Test
+    public void runDecrypt_dealingWithNonAlphabets_String() {
+        Cipher cipher = new Cipher("1-2.3");
+        assertEquals("1-2.3", cipher.decryptText("right",3));
     }
 
 

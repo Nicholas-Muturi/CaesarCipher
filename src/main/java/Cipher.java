@@ -35,6 +35,10 @@ public class Cipher {
                 //noinspection StringConcatenationInLoop
                 encryptedString += " ";
             }
+            else if(letter.matches("[^a-zA-Z]")){
+                //noinspection StringConcatenationInLoop
+                encryptedString += letter;
+            }
             else {
                 if (shiftDirection.equalsIgnoreCase("right")){
                     //Shift Right
@@ -79,6 +83,10 @@ public class Cipher {
             if(letter.contains(" ")){
                 //noinspection StringConcatenationInLoop
                 decryptedString += " ";
+            }
+            else if(letter.matches("[^a-zA-Z]")){
+                //noinspection StringConcatenationInLoop
+                decryptedString += letter;
             }
             else {
                 if (shiftDirection.equalsIgnoreCase("right")){
