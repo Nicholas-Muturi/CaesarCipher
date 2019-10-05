@@ -34,4 +34,10 @@ public class CipherTest {
         Cipher cipher = new Cipher("a");
         assertEquals("c", cipher.encryptText("right",2));
     }
+
+    @Test
+    public void runEncrpt_shiftLettersBeyondZ_String() {
+        Cipher cipher = new Cipher("z");
+        assertEquals("c", cipher.encryptText("right",3));
+    }
 }

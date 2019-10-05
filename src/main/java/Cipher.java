@@ -32,8 +32,14 @@ public class Cipher {
         for (String letter : brokenString) {
             for (int y = 0; y < alphabets.length; y++) {
                 if (letter.equalsIgnoreCase(alphabets[y])) {
-                    //noinspection StringConcatenationInLoop
-                    encryptedString += alphabets[y + shiftBy];
+                    if((y+shiftBy) >= alphabets.length){
+                        //noinspection StringConcatenationInLoop
+                        encryptedString += alphabets[y-26 + shiftBy];
+                    }
+                    else {
+                        //noinspection StringConcatenationInLoop
+                        encryptedString += alphabets[y + shiftBy];
+                    }
                 }
             }
         }
