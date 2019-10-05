@@ -44,7 +44,7 @@ public class Cipher {
                     //Shift Right
                     for (int y = 0; y < alphabets.length; y++) {
                         if (letter.equalsIgnoreCase(alphabets[y])) {
-                            if((y+shiftBy) > alphabets.length){
+                            if((y+shiftBy) >= alphabets.length){
                                 //noinspection StringConcatenationInLoop
                                 encryptedString += alphabets[y-26 + shiftBy];
                             }
@@ -93,7 +93,7 @@ public class Cipher {
                     //Decrypt to the right
                     for (int y = 0; y < alphabets.length; y++) {
                         if (letter.equalsIgnoreCase(alphabets[y])) {
-                            if((y+shiftBy) > alphabets.length){
+                            if((y+shiftBy) >= alphabets.length){
                                 //noinspection StringConcatenationInLoop
                                 decryptedString += alphabets[y-26 + shiftBy];
                             }
@@ -119,9 +119,7 @@ public class Cipher {
                         }
                     }
                 }
-
             }
-
         }
 
         return decryptedString;

@@ -40,7 +40,7 @@ public class CipherTest {
     @Test
     public void runEncrypt_shiftLettersBeyondZ_String() {
         Cipher cipher = new Cipher("z");
-        assertEquals("c", cipher.encryptText("right",3));
+        assertEquals("a", cipher.encryptText("right",1));
     }
 
     @Test
@@ -63,8 +63,8 @@ public class CipherTest {
 
     @Test
     public void runEncrypt_shiftLettersLeftBeyondA_String() {
-        Cipher cipher = new Cipher("ab");
-        assertEquals("yz", cipher.encryptText("left",2));
+        Cipher cipher = new Cipher("a");
+        assertEquals("z", cipher.encryptText("left",1));
     }
 
     @Test
@@ -100,8 +100,8 @@ public class CipherTest {
 
     @Test
     public void runDecrypt_decryptToTheRight_String() {
-        Cipher cipher = new Cipher("qefp tfii abcfkfqbiv tloh");
-        assertEquals("qefp tfii abcfkfqbiv tloh", cipher.decryptText("right",3));
+        Cipher cipher = new Cipher("z");
+        assertEquals("a", cipher.decryptText("right",1));
     }
 
     @Test
