@@ -35,18 +35,33 @@ public class Cipher {
                 encryptedString += " ";
             }
             else {
-                for (int y = 0; y < alphabets.length; y++) {
-                    if (letter.equalsIgnoreCase(alphabets[y])) {
-                        if((y+shiftBy) >= alphabets.length){
-                            //noinspection StringConcatenationInLoop
-                            encryptedString += alphabets[y-26 + shiftBy];
-                        }
-                        else {
-                            //noinspection StringConcatenationInLoop
-                            encryptedString += alphabets[y + shiftBy];
+                if (shiftDirection.equalsIgnoreCase("right")){
+                    //Shift Right
+                    for (int y = 0; y < alphabets.length; y++) {
+                        if (letter.equalsIgnoreCase(alphabets[y])) {
+                            if((y+shiftBy) >= alphabets.length){
+                                //noinspection StringConcatenationInLoop
+                                encryptedString += alphabets[y-26 + shiftBy];
+                            }
+                            else {
+                                //noinspection StringConcatenationInLoop
+                                encryptedString += alphabets[y + shiftBy];
+                            }
                         }
                     }
                 }
+                else {
+                    //Shift Left
+                    for (int y = alphabets.length-1; y >= 0; y--) {
+                        if (letter.equalsIgnoreCase(alphabets[y])) {
+
+                                //noinspection StringConcatenationInLoop
+                                encryptedString += alphabets[y - shiftBy];
+
+                        }
+                    }
+                }
+
             }
         }
         return encryptedString;

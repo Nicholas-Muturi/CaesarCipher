@@ -46,4 +46,11 @@ public class CipherTest {
         Cipher cipher = new Cipher("a b");
         assertEquals("c d", cipher.encryptText("right",2));
     }
+
+    @Test
+    public void runEncrpt_shiftLettersToLeftBy1_String() {
+        Cipher cipher = new Cipher("b");
+        assertEquals("a", cipher.encryptText("left",1));
+    }
+
 }
