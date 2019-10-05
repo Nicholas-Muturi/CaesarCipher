@@ -8,6 +8,7 @@ public class CipherTest {
     @Test
     public void createCipher_instanceOfCipher(){
         Cipher cipher = new Cipher("test string");
+        //noinspection ConstantConditions
         assertTrue(cipher instanceof Cipher);
     }
 
@@ -20,7 +21,8 @@ public class CipherTest {
     @Test
     public void runEncrypt_receiveInput_String(){
         Cipher cipher = new Cipher("test");
-        assertEquals("test",cipher.encryptText("right",1 ));
+        //noinspection ConstantConditions
+        assertTrue(cipher.encryptText("right", 1) instanceof String);
     }
 
     @Test
@@ -57,6 +59,13 @@ public class CipherTest {
     public void runEncrypt_shiftLettersLeftBeyondA_String() {
         Cipher cipher = new Cipher("ab");
         assertEquals("yz", cipher.encryptText("left",2));
+    }
+
+    @Test
+    public void runDecrypt_receiveInput_String(){
+        Cipher cipher = new Cipher("test");
+        //noinspection ConstantConditions
+        assertTrue(cipher.decryptText("right", 1) instanceof String);
     }
 
 }

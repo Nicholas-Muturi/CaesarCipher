@@ -70,4 +70,9 @@ public class Cipher {
         }
         return encryptedString;
     }
+
+    public String decryptText(String shiftDirection, int shiftBy){
+        decryptedString = inputString;
+        return decryptedString;
+    }
 }
