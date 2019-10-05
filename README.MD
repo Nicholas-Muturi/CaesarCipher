@@ -4,12 +4,19 @@
 ## Description
 A Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code or Caesar shift, is one of the simplest and most widely known encryption techniques. It is a type of substitution cipher in which each letter in the plain text is replaced by a letter some fixed number of positions down the alphabet.
 
-###### Example
+###### Example encryption
 | Input  | Shift Type | Output |
 | :----: |:----:|:----:|
-| A | Left shift of 1 | B |
-| EFG | Left shift of 3 | HIJ |
-| The quick brown fox jumps | Right shift of 3 | Qeb nrfzh yoltk clu grjmp |
+| a | Left shift of 1 | z |
+| efg | Left shift of 3 | hij |
+| the quick brown fox jumps | Right shift of 3 | qeb nrfzh yoltk clu grjmp |
+
+###### Example decryption
+| Input  | Shift Type | Output |
+| :----: |:----:|:----:|
+| a | Left shift of 1 | z |
+| efg | Left shift of 3 | bcd |
+| qefp tfii abcfkfqbiv tloh | Right shift of 3 | this will definitely work |
 
 ## Prerequisites
 * Java JDK
@@ -36,7 +43,7 @@ A Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code 
 + Navigate to the App class file located at build/classes/java/main and run: `java App`.
 
 ## Known Bugs
-As far as I'm aware there are no bugs.
+No bugs detected during the development of this project.
 
 ## License
 This projects has a MIT License [found here](LICENSE)

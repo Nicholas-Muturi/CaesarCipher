@@ -100,8 +100,8 @@ public class CipherTest {
 
     @Test
     public void runDecrypt_decryptToTheRight_String() {
-        Cipher cipher = new Cipher("qeb nrfzh yoltk clu grjmp");
-        assertEquals("the quick brown fox jumps", cipher.decryptText("right",3));
+        Cipher cipher = new Cipher("qefp tfii abcfkfqbiv tloh");
+        assertEquals("qefp tfii abcfkfqbiv tloh", cipher.decryptText("right",3));
     }
 
     @Test
