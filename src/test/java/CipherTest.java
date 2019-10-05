@@ -40,4 +40,10 @@ public class CipherTest {
         Cipher cipher = new Cipher("z");
         assertEquals("c", cipher.encryptText("right",3));
     }
+
+    @Test
+    public void runEncrpt_dealingWithEncryptWhitespaces_String() {
+        Cipher cipher = new Cipher("a b");
+        assertEquals("c d", cipher.encryptText("right",2));
+    }
 }

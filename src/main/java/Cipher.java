@@ -30,15 +30,21 @@ public class Cipher {
     public String encryptText(String shiftDirection, int shiftBy){
         String[] brokenString = inputString.split("");
         for (String letter : brokenString) {
-            for (int y = 0; y < alphabets.length; y++) {
-                if (letter.equalsIgnoreCase(alphabets[y])) {
-                    if((y+shiftBy) >= alphabets.length){
-                        //noinspection StringConcatenationInLoop
-                        encryptedString += alphabets[y-26 + shiftBy];
-                    }
-                    else {
-                        //noinspection StringConcatenationInLoop
-                        encryptedString += alphabets[y + shiftBy];
+            if(letter.contains(" ")){
+                //noinspection StringConcatenationInLoop
+                encryptedString += " ";
+            }
+            else {
+                for (int y = 0; y < alphabets.length; y++) {
+                    if (letter.equalsIgnoreCase(alphabets[y])) {
+                        if((y+shiftBy) >= alphabets.length){
+                            //noinspection StringConcatenationInLoop
+                            encryptedString += alphabets[y-26 + shiftBy];
+                        }
+                        else {
+                            //noinspection StringConcatenationInLoop
+                            encryptedString += alphabets[y + shiftBy];
+                        }
                     }
                 }
             }
