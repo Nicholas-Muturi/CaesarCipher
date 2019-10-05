@@ -28,4 +28,10 @@ public class CipherTest {
         Cipher cipher = new Cipher("a");
         assertEquals("b", cipher.encryptText("right",1));
     }
+
+    @Test
+    public void runEncrpt_shiftLettersBy2_String() {
+        Cipher cipher = new Cipher("a");
+        assertEquals("c", cipher.encryptText("right",2));
+    }
 }
