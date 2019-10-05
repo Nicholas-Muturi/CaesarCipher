@@ -17,4 +17,10 @@ public class CipherTest {
         assertEquals("test string", cipher.getInputString());
     }
 
+    @Test
+    public void runEncrypt_receiveInput_String(){
+        Cipher cipher = new Cipher("test");
+        assertEquals("test",cipher.encryptText("right", 3));
+    }
+
 }
