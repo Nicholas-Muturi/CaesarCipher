@@ -82,9 +82,16 @@ public class CipherTest {
 
     @Test
     public void runDecrypt_decryptShiftBeyondA_String() {
-        Cipher cipher = new Cipher("a");
-        assertEquals("z", cipher.decryptText("right",1));
+        Cipher cipher = new Cipher("b");
+        assertEquals("a", cipher.decryptText("left",1));
     }
+
+    @Test
+    public void runDecrypt_decryptWithWhitespace_String() {
+        Cipher cipher = new Cipher("a b c");
+        assertEquals("z a b", cipher.decryptText("left",1));
+    }
+
 
 
 }

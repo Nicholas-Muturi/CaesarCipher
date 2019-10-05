@@ -76,18 +76,25 @@ public class Cipher {
         String[] brokenString = inputString.split("");
 
         for (String letter : brokenString) {
-            for (int y = alphabets.length-1; y >= 0; y--) {
-                if (letter.equalsIgnoreCase(alphabets[y])) {
-                    if((y-shiftBy) < 0){
-                        //noinspection StringConcatenationInLoop
-                        decryptedString += alphabets[y+26-shiftBy];
-                    }
-                    else {
-                        //noinspection StringConcatenationInLoop
-                        decryptedString += alphabets[y - shiftBy];
+            if(letter.contains(" ")){
+                //noinspection StringConcatenationInLoop
+                decryptedString += " ";
+            }
+            else {
+                for (int y = alphabets.length-1; y >= 0; y--) {
+                    if (letter.equalsIgnoreCase(alphabets[y])) {
+                        if((y-shiftBy) < 0){
+                            //noinspection StringConcatenationInLoop
+                            decryptedString += alphabets[y+26-shiftBy];
+                        }
+                        else {
+                            //noinspection StringConcatenationInLoop
+                            decryptedString += alphabets[y - shiftBy];
+                        }
                     }
                 }
             }
+
         }
 
         return decryptedString;
