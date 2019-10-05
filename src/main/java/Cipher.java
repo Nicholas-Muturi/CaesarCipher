@@ -78,8 +78,14 @@ public class Cipher {
         for (String letter : brokenString) {
             for (int y = alphabets.length-1; y >= 0; y--) {
                 if (letter.equalsIgnoreCase(alphabets[y])) {
-                    //noinspection StringConcatenationInLoop
-                    decryptedString += alphabets[y - shiftBy];
+                    if((y-shiftBy) < 0){
+                        //noinspection StringConcatenationInLoop
+                        decryptedString += alphabets[y+26-shiftBy];
+                    }
+                    else {
+                        //noinspection StringConcatenationInLoop
+                        decryptedString += alphabets[y - shiftBy];
+                    }
                 }
             }
         }

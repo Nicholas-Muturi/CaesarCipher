@@ -69,8 +69,22 @@ public class CipherTest {
     }
 
     @Test
-    public void runDecrypt_decrypt1Letter_String() {
+    public void runDecrypt_decryptShiftBy1_String() {
         Cipher cipher = new Cipher("z");
         assertEquals("y", cipher.decryptText("right",1));
     }
+
+    @Test
+    public void runDecrypt_decryptShiftBy2_String() {
+        Cipher cipher = new Cipher("cd");
+        assertEquals("ab", cipher.decryptText("right",2));
+    }
+
+    @Test
+    public void runDecrypt_decryptShiftBeyondA_String() {
+        Cipher cipher = new Cipher("a");
+        assertEquals("z", cipher.decryptText("right",1));
+    }
+
+
 }
