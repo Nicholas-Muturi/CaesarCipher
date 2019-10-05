@@ -20,7 +20,12 @@ public class CipherTest {
     @Test
     public void runEncrypt_receiveInput_String(){
         Cipher cipher = new Cipher("test");
-        assertEquals("test",cipher.encryptText("right", 3));
+        assertEquals("test",cipher.encryptText("right",1 ));
     }
 
+    @Test
+    public void runEncrpt_shiftLettersBy1_String() {
+        Cipher cipher = new Cipher("a");
+        assertEquals("b", cipher.encryptText("right",1));
+    }
 }
