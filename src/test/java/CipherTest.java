@@ -82,8 +82,8 @@ public class CipherTest {
 
     @Test
     public void runDecrypt_decryptShiftBeyondA_String() {
-        Cipher cipher = new Cipher("b");
-        assertEquals("a", cipher.decryptText("left",1));
+        Cipher cipher = new Cipher("fyyfhp fy ifbs");
+        assertEquals("attack at dawn", cipher.decryptText("left",5));
     }
 
     @Test
@@ -92,6 +92,11 @@ public class CipherTest {
         assertEquals("z a b", cipher.decryptText("left",1));
     }
 
+    @Test
+    public void runDecrypt_decryptToTheRight_String() {
+        Cipher cipher = new Cipher("qeb nrfzh yoltk clu grjmp");
+        assertEquals("the quick brown fox jumps", cipher.decryptText("right",3));
+    }
 
 
 }
