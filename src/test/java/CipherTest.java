@@ -24,33 +24,39 @@ public class CipherTest {
     }
 
     @Test
-    public void runEncrpt_shiftLettersBy1_String() {
+    public void runEncyrpt_shiftLettersBy1_String() {
         Cipher cipher = new Cipher("a");
         assertEquals("b", cipher.encryptText("right",1));
     }
 
     @Test
-    public void runEncrpt_shiftLettersBy2_String() {
+    public void runEncrypt_shiftLettersBy2_String() {
         Cipher cipher = new Cipher("a");
         assertEquals("c", cipher.encryptText("right",2));
     }
 
     @Test
-    public void runEncrpt_shiftLettersBeyondZ_String() {
+    public void runEncrypt_shiftLettersBeyondZ_String() {
         Cipher cipher = new Cipher("z");
         assertEquals("c", cipher.encryptText("right",3));
     }
 
     @Test
-    public void runEncrpt_dealingWithEncryptWhitespaces_String() {
+    public void runEncrypt_dealingWithEncryptWhitespaces_String() {
         Cipher cipher = new Cipher("a b");
         assertEquals("c d", cipher.encryptText("right",2));
     }
 
     @Test
-    public void runEncrpt_shiftLettersToLeftBy1_String() {
+    public void runEncrypt_shiftLettersToLeftBy1_String() {
         Cipher cipher = new Cipher("b");
         assertEquals("a", cipher.encryptText("left",1));
+    }
+
+    @Test
+    public void runEncrypt_shiftLettersLeftBeyondA_String() {
+        Cipher cipher = new Cipher("ab");
+        assertEquals("yz", cipher.encryptText("left",2));
     }
 
 }
