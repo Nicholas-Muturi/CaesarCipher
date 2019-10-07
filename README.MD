@@ -10,7 +10,7 @@ A Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code 
 | a | Left shift of 1 | z |
 | efg | Left shift of 2 | cde |
 | elemenop | Right shift of 1 | fmfnfopq |
-| the quick brown fox jumps | Right shift of 3 | wkh txlfn eurzq ira mxpsv |
+| the quick brown fox | Right shift of 3 | wkh txlfn eurzq ira |
 
 ###### Example decryption
 | Input  | Shift Type | Output |
@@ -33,7 +33,13 @@ A Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code 
 * Junit
 
 ## Setup Guide
++ Run `java --version` to check which version of java you have installed in your device. If you have java installed, you should see an output slightly similar to the one below...  
+_**openjdk 10.0.2 2018-07-17**_  
+_**OpenJDK Runtime Environment (build 10.0.2+13-Ubuntu-1ubuntu0.18.04.4)**_  
+ ... then you need to install java by running this : `sudo apt install default-jre`
+
 + Clone the repository into a desired folder by running the following link in your terminal: `https://github.com/Nicholas-Muturi/CaesarCipher.git`
+
 ###### (for users with an IDE such as IntelliJ)
 + Open the project using the IDE you have installed
 + Build and Run the project.
