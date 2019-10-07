@@ -8,15 +8,17 @@ A Caesar cipher, also known as Caesar's cipher, the shift cipher, Caesar's code 
 | Input  | Shift Type | Output |
 | :----: |:----:|:----:|
 | a | Left shift of 1 | z |
-| efg | Left shift of 3 | hij |
-| the quick brown fox jumps | Right shift of 3 | qeb nrfzh yoltk clu grjmp |
+| efg | Left shift of 2 | cde |
+| elemenop | Right shift of 1 | fmfnfopq |
+| the quick brown fox jumps | Right shift of 3 | wkh txlfn eurzq ira mxpsv |
 
 ###### Example decryption
 | Input  | Shift Type | Output |
 | :----: |:----:|:----:|
-| a | Left shift of 1 | z |
-| efg | Left shift of 3 | bcd |
-| qefp tfii abcfkfqbiv tloh | Right shift of 3 | this will definitely work |
+| ij | Left shift of 1 | hi |
+| pb qdph | Left shift of 3 | my name |
+| hr | Right shift of 1 | is |
+| pifj pexav | Right shift of 3 | slim shady |
 
 ## Prerequisites
 * Java JDK
