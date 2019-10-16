@@ -77,13 +77,13 @@ public class CipherTest {
     @Test
     public void runDecrypt_decryptShiftBy1_String() {
         Cipher cipher = new Cipher("z");
-        assertEquals("y", cipher.decryptText("right",1));
+        assertEquals("a", cipher.decryptText("right",1));
     }
 
     @Test
     public void runDecrypt_decryptShiftBy2_String() {
         Cipher cipher = new Cipher("cd");
-        assertEquals("ab", cipher.decryptText("right",2));
+        assertEquals("ef", cipher.decryptText("right",2));
     }
 
     @Test
